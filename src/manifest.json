@@ -1,0 +1,30 @@
+{
+    "author": "Dagner Ramos Sacari",
+    "name": "Chrome template",
+    "version": "0.1.0",
+    "description": "Template to develop extensions with typescript, tailwind and reactjs",
+    "permissions": [
+        "storage",
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_icon": {
+            "128": "icon.png"
+        },
+        "default_title": "chrome template",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}

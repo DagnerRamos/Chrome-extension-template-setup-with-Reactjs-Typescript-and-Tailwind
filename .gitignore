@@ -1,0 +1,5 @@
+# Ignore auto generated Files/Folders
+/dist/
+
+# Ignore dependencies and modules
+/node_modules/
