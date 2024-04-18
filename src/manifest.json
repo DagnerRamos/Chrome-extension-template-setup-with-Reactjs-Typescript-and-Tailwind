@@ -4,9 +4,8 @@
     "version": "0.1.0",
     "description": "Template to develop extensions with typescript, tailwind and reactjs",
     "permissions": [
-        "storage",
-        "scripting",
-        "tabs"
+        "tabs",
+        "contextMenus"
     ],
     "host_permissions": ["<all_urls>"],
     "content_scripts": [
@@ -26,5 +25,11 @@
         "default_title": "chrome template",
         "default_popup": "popup.html"
     },
+    "web_accessible_resources": [
+        {
+          "resources": ["form_test.html"],
+          "matches": ["<all_urls>"]
+        }
+      ],
     "manifest_version": 3
 }
