@@ -1,9 +1,9 @@
 ﻿# Chrome-extension-template-setup-with-Reactjs-Typescript-and-Tailwind
 
-This is a template to depelov browser extensions using **Reactjs**, **Tailwind** and **Typescript**.
-UPDATE:18/04/2024 Added a example to make clear how to create new tabs, you can find it in **src/form_test**,
-once you have it installed you can go to any page **right click** anywhere to open the menu and you will see a option
-called **Test Form** and it will open a new tab which one will ask for the title of the page/tab who opened it, you will clearly see it at the start.
+This is a template to depelov browser extensions using **Reactjs**, **Tailwind** and **Typescript**. <br>
+UPDATE:18/04/2024 Added a example to make clear how to create new tabs using react, you can find it in **src/form_example**,
+once you have it installed in your browser you can go to any page **right click** anywhere to open the menu and you will see a option
+called **Example Form** and it will open a new tab which one will ask for the title of the page/tab who opened it, you will clearly see it at the start.
 **That's it, Thanks!**                   
 
 ## Getting Started
