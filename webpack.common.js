@@ -4,13 +4,11 @@ const CopyPlugin = require('copy-webpack-plugin');
 const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 module.exports = {
-    mode : "development",
-    devtool: 'cheap-module-source-map',
     entry: {
         popup: path.resolve('./src/popup/index.tsx'),
         content: path.resolve('./src/content.ts'),
         background: path.resolve('./src/background/background.ts'),
-        form_test: path.resolve('./src/form_test/index.tsx')
+        form_example: path.resolve('./src/form_example/index.tsx')
     },
     module: {
         rules: [
@@ -55,7 +53,7 @@ module.exports = {
         }),
         ...getHtmlPluginsFromChunks([
             'popup',
-            'form_test'
+            'form_example'
         ])
     ],
     resolve: {

@@ -27,7 +27,7 @@
     },
     "web_accessible_resources": [
         {
-          "resources": ["form_test.html"],
+          "resources": ["form_example.html"],
           "matches": ["<all_urls>"]
         }
       ],

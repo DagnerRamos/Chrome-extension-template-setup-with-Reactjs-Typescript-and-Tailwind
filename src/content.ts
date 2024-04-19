@@ -2,7 +2,7 @@ console.log("Content Active")
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     console.log('Got it :', request);
     
-    if (request.greeting === "Hi from the form test") {
+    if (request.greeting === "Hi from the form example") {
       // Realizar alguna acción en respuesta al mensaje recibido
       sendResponse({ 
         confirmation: "Recived your greetings!",

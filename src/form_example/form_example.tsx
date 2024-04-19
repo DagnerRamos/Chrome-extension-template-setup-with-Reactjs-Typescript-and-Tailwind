@@ -1,14 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import '../assets/tailwind.css';
- const FormTestApp = ()=> {
+ const FormExampleApp = ()=> {
     const [title, setTitle ] = useState("");
     useEffect(()=>{
       const getTitleOfPageOpener = ()=>{
         chrome.tabs.getCurrent(function(tab) {
             if ( tab.openerTabId){
                 chrome.tabs.sendMessage(tab.openerTabId, {
-                    greeting: "Hi from the form test",
+                    greeting: "Hi from the form example",
                 }, function(response){
                     console.log(response)
                     response.title ? setTitle(response.title): "";
@@ -213,4 +213,4 @@ import '../assets/tailwind.css';
 )
 }
 
-export default FormTestApp;
+export default FormExampleApp;

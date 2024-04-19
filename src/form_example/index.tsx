@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
 import '../assets/tailwind.css'
-import FormTestApp from "./form_test";
+import FormExampleApp from "./form_example";
 
 
 const appContainer = document.createElement('div')
@@ -11,6 +11,6 @@ if (!appContainer) {
 }
 ReactDOM.createRoot(appContainer).render(
     <React.StrictMode>
-        <FormTestApp/>
+        <FormExampleApp/>
     </React.StrictMode>
 );
