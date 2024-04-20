@@ -1,12 +1,13 @@
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 module.exports = {
     entry: {
         popup: path.resolve('./src/popup/index.tsx'),
-        content: path.resolve('./src/content.ts'),
+        content: path.resolve('./src/content/index.tsx'),
         background: path.resolve('./src/background/background.ts'),
         form_example: path.resolve('./src/form_example/index.tsx')
     },
@@ -54,13 +55,23 @@ module.exports = {
         ...getHtmlPluginsFromChunks([
             'popup',
             'form_example'
-        ])
+        ]),
+        new CleanWebpackPlugin ({
+            cleanStaleWebpackAssets: false
+        }),
     ],
     resolve: {
         extensions: ['.tsx', '.ts', '.js']
     },
     output: {
         filename: '[name].js'
+    },
+    optimization: {
+        splitChunks: {
+            chunks(chunk){
+                return chunk.name !== 'content'
+            }
+        }
     }
 }
 function getHtmlPluginsFromChunks(chunks){
